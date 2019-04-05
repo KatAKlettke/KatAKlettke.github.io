@@ -2,7 +2,7 @@
 layout: post
 title: "WIP: Yerefiah"
 date: 2019-04-05 18:20:00 +0200
-categories: yvari, wip, people, campnano
+categories: yvari wip people campnano
 ---
 
 # Yerefiah
