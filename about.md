@@ -1,14 +1,14 @@
 ---
 layout: page
-title: About Me
-permalink: /about/
+title: About Kat A. Klettke
+permalink: /aboutkat/
 ---
 
 # I am many things.
 
-A writer, gamer, autist, learner, coder, worldbuilder, christian, lover, in no particular order.
+A writer, gamer, autist, artist, learner, coder, worldbuilder, christian, lover, in no particular order.
 
-## Projects
+## Current Project
 Currently I'm very excited about my pet project - [Yvari](https://www.worldanvil.com/w/yvari-imoenkim).
 
 Yvari started as a crazy idea when it occured to me I wanted to try my hand on gamedev. If you want to learn it, what better way to do so on a personal project? And clearly you can't use an existing franchise, so I had to invent my own.
