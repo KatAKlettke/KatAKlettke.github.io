@@ -13,5 +13,7 @@ Akuthu is a skald of one of the Eziliari floating cities.
 
 ## Questions
 * What does he look like?
+* Is "he" a he?
 * Does he have a partner?
 * What are the duties and taboos for the rank of skald?
+* What are the names of the floating cities?
