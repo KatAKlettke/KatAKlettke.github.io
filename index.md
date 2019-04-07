@@ -5,7 +5,8 @@
 layout: home
 ---
 
-{% for project in site.projects %}
-   <h2><a href="{{ project.url }}">{{ project.name }} - {{ project.kind }}</a></h2>
-   <p>{{ projects.content | markdownify }}</p>
-{% endfor %}
+|----------------+--------------+-----------------|
+| Kat's projects | Our Projects | Joon's projects |
+|----------------+--------------+-----------------|
+|{% for project in site.projects %}<a href="{{ project.url }}">{{ project.name }}</a>{% endfor %}| TBA | TBA |
+|----------------|--------------|-----------------|

@@ -3,48 +3,121 @@
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; }
+
 .kat {
   /* Old browsers */
   background: #05515C;
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(-45deg, #35577D, #05515C);
+  background: -webkit-linear-gradient(-45deg, #36577d, #0d6573);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(-45deg, #35577D, #05515C);
+  background: linear-gradient(-45deg, #36577d, #0d6573);
   margin-top: 20px;
   margin-bottom: 10px;
-  width: 400px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-width: 400px;
+  width: 35%;
+  color: white;
   display: inline-block;
   text-align: left;
-  padding: 5px; }
-
-.site-header .kat, .site-header .joon {
-  height: 50px; }
-
-.joon {
-  /* Old browsers */
-  background: #72109C;
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(-45deg, #FA8BF1, #72109C);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(-45deg, #FA8BF1, #72109C);
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 400px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #56055C;
-  display: inline-block;
-  text-align: right;
   padding: 5px; }
 
 .kat a {
   color: white; }
 
+.kat-content {
+  /* Old browsers */
+  background: #05515C;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, rgba(54, 87, 125, 0.4), rgba(13, 101, 115, 0.4));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, rgba(54, 87, 125, 0.4), rgba(13, 101, 115, 0.4));
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  color: #333; }
+
+.joon {
+  /* Old browsers */
+  background: #72109C;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, #9145a1, #73109d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, #9145a1, #73109d);
+  margin-top: 20px;
+  margin-bottom: 10px;
+  min-width: 400px;
+  width: 35%;
+  color: #e0adeb;
+  display: inline-block;
+  text-align: right;
+  padding: 5px; }
+
 .joon a {
-  color: #56055C; }
+  color: #e0adeb; }
+
+.joon-content {
+  /* Old browsers */
+  background: #72109C;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, rgba(145, 69, 161, 0.4), rgba(115, 16, 157, 0.4));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, rgba(145, 69, 161, 0.4), rgba(115, 16, 157, 0.4));
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  color: #333; }
+
+.us {
+  width: 150px;
+  background-color: white;
+  display: inline-block;
+  height: 40px;
+  margin: 0px -77px;
+  position: relative;
+  z-index: 10;
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  top: 15px; }
+
+.us a {
+  color: #333;
+  text-decoration: none; }
+
+.us-content {
+  /* Old browsers */
+  background: #999;
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(-45deg, rgba(153, 153, 153, 0.4), rgba(102, 102, 102, 0.4));
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(-45deg, rgba(153, 153, 153, 0.4), rgba(102, 102, 102, 0.4));
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  color: #333; }
+
+.site-header .kat, .site-header .joon {
+  height: 70px; }
 
 .bold {
   font-weight: bold; }
 
 .site-header, .site-footer {
   text-align: center; }
+
+.svg-icon {
+  height: 20px;
+  width: 20px; }
+
+ul {
+  list-style-type: none; }
+
+.page-content p {
+  margin-bottom: 10px; }
+
+.home table {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px; }
