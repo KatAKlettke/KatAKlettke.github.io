@@ -1,0 +1,86 @@
+.user-css-presentation {
+background-image: url(http://thereznobizlikeshow.biz/extern/yvari.jpg) !important;
+}
+
+.user-css .user-row {
+    padding: 10px;
+}
+
+.user-css .phrase-key {
+    margin-bottom: 5px;
+}
+
+.user-css .aloud {
+    color: #000;
+    border-width: 3px;
+    border-color: #7A290DBB;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    box-shadow: 4px 4px #7A290D55;
+    background: #7A290D22;
+    width: 90%;
+    margin: auto;
+}
+
+ .user-css div.relation h5 {
+    font-size: 18px;
+}
+
+// Headlines
+
+.user-css .article-title h1 {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   font-size: 75px !important;
+}
+
+.user-css h2 {
+   font-size: 50px;
+}
+
+.user-css h3 {
+   font-size: 40px;
+}
+
+.user-css h4 {
+   font-size: 30px;
+}
+
+.user-css h5 {
+   font-size: 20px;
+}
+
+.user-css .background-box {
+    background: var(--box-background);
+    border: var(--box-border);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+}
+
+.user-css.freecities:before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: url(https://www.worldanvil.com/uploads/images/fea8b4abb1dc879f2262a6cbae51e7da.jpg);
+    background-size: cover;
+    display: block;
+    z-index: -1;
+}
+
+.freecities.user-css .aloud {
+    font-style: italic;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #0fc8f855;
+    color: #000000;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    border-width: 5px;
+    border-style: ridge;
+    border-color: #612b03bb;
+    text-shadow: 5px 5px 15px #333333dd;
+}
