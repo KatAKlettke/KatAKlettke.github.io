@@ -77,9 +77,9 @@ body {
 	color: #333;
 }
 
-.us {
+.us-header {
 	width: 150px;
-	background-color: hsla(0, 0%, 100%, 1);
+	background-color: white;
 	display: inline-block;
 	height: 40px;
 	margin: 0px -77px;
@@ -88,12 +88,24 @@ body {
 	padding: 8px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	top: 15px;
-}
-
-.us a {
+	top: 15px; }
+  
+	.us-footer {
+	  width: 150px;
+	  background-color: white;
+	  display: inline-block;
+	  height: 50px;
+	  margin: 0px -77px;
+	  position: relative;
+	  z-index: 10;
+	  padding: 8px;
+	  text-transform: uppercase;
+	  letter-spacing: 2px;
+	  bottom: 50px; }
+  
+  .us-header a, .us-footer a {
 	color: #333;
-	text-decoration: none;
+	text-decoration: none; }
 }
 
 .us-content {
