@@ -39,6 +39,7 @@ body {
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background: linear-gradient(-45deg, hsla(212, 40%, 35%, 0.4), hsla(188, 80%, 25%, 0.4));
 	width: 70%;
+	min-width: 805px;
 	margin: 0 auto;
 	padding: 5px;
 	color: #333;
@@ -73,6 +74,7 @@ body {
 	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background: linear-gradient(-45deg, hsla(290, 40%, 45%, 0.4), hsla(282, 81%, 34%, 0.4));
 	width: 70%;
+	min-width: 805px;
 	margin: 0 auto;
 	padding: 5px;
 	color: #333;
@@ -122,7 +124,6 @@ body {
 	color: #333;
 	min-width: 805px;
 }
-
 
 .site-header .kat, .site-header .joon {
 	height: 70px;

@@ -34,6 +34,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(-45deg, rgba(54, 87, 125, 0.4), rgba(13, 101, 115, 0.4));
   width: 70%;
+  min-width: 805px;
   margin: 0 auto;
   padding: 5px;
   color: #333; }
@@ -65,6 +66,7 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(-45deg, rgba(145, 69, 161, 0.4), rgba(115, 16, 157, 0.4));
   width: 70%;
+  min-width: 805px;
   margin: 0 auto;
   padding: 5px;
   color: #333; }
