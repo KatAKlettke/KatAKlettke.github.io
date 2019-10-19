@@ -16,7 +16,7 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
   min-width: 400px;
-  width: 30%;
+  width: 35%;
   color: white;
   display: inline-block;
   text-align: left;
@@ -47,7 +47,7 @@ body {
   margin-top: 20px;
   margin-bottom: 10px;
   min-width: 400px;
-  width: 30%;
+  width: 35%;
   color: #e0adeb;
   display: inline-block;
   text-align: right;
@@ -68,8 +68,8 @@ body {
   padding: 5px;
   color: #333; }
 
-.us {
-  width: 175px;
+.us-header {
+  width: 150px;
   background-color: white;
   display: inline-block;
   height: 40px;
@@ -81,7 +81,20 @@ body {
   letter-spacing: 2px;
   top: 15px; }
 
-.us a {
+  .us-footer {
+    width: 150px;
+    background-color: white;
+    display: inline-block;
+    height: 50px;
+    margin: 0px -77px;
+    position: relative;
+    z-index: 10;
+    padding: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    bottom: 50px; }
+
+.us-header a, .us-footer a {
   color: #333;
   text-decoration: none; }
 
