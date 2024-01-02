@@ -1,0 +1,76 @@
+:root {
+    --dark-gray: #222222;
+    --light-gray: #AAAAAA;
+    --almost-white: #DDDDDD;
+    --really-white: #EFEFEF;
+}
+
+@font-face {
+    font-family: 'Lexend Thin';
+    src: url('./Lexend_Peta/static/LexendPeta-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Lexend SemiBold';
+    src: url('./Lexend_Peta/static/LexendPeta-SemiBold.ttf')
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-weight: 100;
+    padding: 0.3rem;
+    border-left: 1px solid var(--almost-white);
+    border-top: 1px solid var(--almost-white);
+    box-shadow: 25px 7px 5px var(--light-gray);
+    margin: 2rem 40px;
+}
+
+h1 {
+    font-size: 1.75rem;
+}
+
+#container-all {
+    max-width: 605px;
+    margin: 0 auto;
+}
+
+main {
+    margin: 0 40px;
+}
+
+section {
+    max-width: 600px;
+    padding: 15px;
+}
+
+.major-section-tab {
+    background-color: var(--light-gray);
+    width: 140px;
+}
+
+.major-section-header {
+    padding: 5px;
+    margin-top: 2rem;
+    color: var(--really-white);
+    font-family: "Lexend SemiBold", sans-serif;
+}
+
+.major-section {
+    border: solid 1px var(--almost-white);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+#work-skills-container {
+    display: flex;
+    flex-direction: row;
+}
