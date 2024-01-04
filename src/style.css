@@ -3,6 +3,8 @@
     --light-gray: #AAAAAA;
     --almost-white: #DDDDDD;
     --really-white: #EFEFEF;
+    --init-green: #009D3C;
+    --init-green-light: #47DD80;
 }
 
 @font-face {
@@ -22,20 +24,41 @@
 }
 
 header {
+}
+
+#name-headline {
     display: block;
     max-width: 600px;
     color: var(--dark-gray);
     font-family: "Lexend Thin", sans-serif;
     font-weight: 100;
     padding: 0.3rem;
-    border-left: 1px solid var(--almost-white);
-    border-top: 1px solid var(--almost-white);
+    border: 1px solid var(--almost-white);
     box-shadow: 25px 7px 5px var(--light-gray);
     margin: 2rem 40px;
+    font-size: 1.75rem;
 }
 
-h1 {
-    font-size: 1.75rem;
+#working-at-init {
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    border: 1px solid var(--init-green-light);
+    box-shadow: 25px 7px 5px var(--init-green);
+    margin: 2rem 40px;
+    line-height: 1.3rem;
+}
+
+#working-at-init > a {
+    text-decoration: none;
+    color: var(--dark-gray);
+}
+
+#working-at-init > a:hover {
+    text-decoration: overline underline;
 }
 
 #container-all {

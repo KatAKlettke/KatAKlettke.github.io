@@ -1,0 +1,8 @@
+Sassy
+=====
+I'm not here to gatekeep quality. Every application has bugs and weaknesses. Releasing software is not a question of when it's bug free, but of when we are confident that there are no major flaws left.
+My job is to help you assess the risk of issues. i#m not here to make your decisions for you - if you decide to release with a major security flaw, that's on you. I'm here to let you know it's probably a bad idea and why.
+Don't say I didn't warn you.
+
+Timid
+=====
