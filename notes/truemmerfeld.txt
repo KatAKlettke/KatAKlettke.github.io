@@ -1,0 +1,66 @@
+Sassy
+=====
+I'm not here to gatekeep quality. Every application has bugs and weaknesses. Releasing software is not a question of when it's bug free, but of when we are confident that there are no major flaws left.
+My job is to help you assess the risk of issues. i#m not here to make your decisions for you - if you decide to release with a major security flaw, that's on you. I'm here to let you know it's probably a bad idea and why.
+Don't say I didn't warn you.
+
+Timid
+=====
+I love fixing things and making sure things work as expected. This being a special interest of mine allows me to utilize my autistic hyperfocus and pattern recognition to spot irregularities.
+I'm barely able to read between the lines - and that's good! It means I will question things a lot, and you can't just assume I know what you mean. I will make you be explicit in your requirements, and this will tremendously improve your teamwork.
+No more assumptions gone wrong.
+
+More tidbits
+============
+I can't guarantee a bugfree release, but I can help you feel confident that whatever we release will not have major breaking bugs.
+
+I'm here to inspire confidence in your product. I will help you understand the risks and tradeoffs between releasing now and putting in more effort.
+
+Rarely do you have time to test as thoroughly as is ideal, but I aim to make you aware of how risky (or not!) it is to release right now, so you can weigh the risk against the opportunity and make an informed business decision.
+
+
+            <!--
+            <div class="major-section-tab">
+                <h2 class="major-section-header">Work</h2>
+            </div>
+            <section id="work" class="major-section">
+                <h3>Junior Software Tester with exceptional focus and attention to detail, making risk manageable</h3>
+                <p>I'm not here to gatekeep quality. Every application has bugs and weaknesses. Releasing software is not a question of when it's bug free, but of when we are confident that there are no major flaws left.</p>
+                <p>My job is to help you assess the risk of issues. i#m not here to make your decisions for you - if you decide to release with a major security flaw, that's on you. I'm here to let you know it's probably a bad idea and why.</p>
+                <p>Don't say I didn't warn you.</p>
+                <div id="work-skills-container">
+                    <div id="work-skills-hard">
+                        <h4>Hard Skills</h4>
+                        <ul>
+                            <li>Agile Testing</li>
+                            <li>Test Strategy</li>
+                            <li>Test Automation</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                            <li>Testcafe</li>
+                            <li>Confluence</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div id="work-skills-soft">
+                        <h4>Soft Skills</h4>
+                        <ul>
+                            <li>Communication</li>
+                            <li>Documentation</li>
+                            <li>Keen eye for details</li>
+                            <li>Autistic Hyperfocus</li>
+                            <li>Persistence</li>
+                            <li>Exactness</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            -->
+            <!--
+            <div class="major-section-tab">
+                <h2 class="major-section-header">Play</h2>
+            </div>
+            <section id="play" class="major-section">
+            </section>
+            -->

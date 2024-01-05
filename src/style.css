@@ -5,6 +5,8 @@
     --really-white: #EFEFEF;
     --init-green: #009D3C;
     --init-green-light: #47DD80;
+    --light-blue: #00ABE7;
+    --light-blue-pale: #42CDFF;
 }
 
 @font-face {
@@ -23,7 +25,8 @@
     margin: 0;
 }
 
-header {
+a {
+    color: var(--init-green);
 }
 
 #name-headline {
@@ -33,8 +36,8 @@ header {
     font-family: "Lexend Thin", sans-serif;
     font-weight: 100;
     padding: 0.3rem;
-    border: 1px solid var(--almost-white);
-    box-shadow: 25px 7px 5px var(--light-gray);
+    border: 1px solid var(--light-blue-pale);
+    box-shadow: 25px 7px 5px var(--light-blue);
     margin: 2rem 40px;
     font-size: 1.75rem;
 }
@@ -61,6 +64,35 @@ header {
     text-decoration: overline underline;
 }
 
+.section-headline {
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: 1px solid var(--light-blue-pale);
+    box-shadow: 25px 7px 5px var(--light-blue);
+    margin-top: 1rem;
+}
+
+.section-text {
+    margin-top: 4px;
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    border: 1px solid var(--light-blue-pale);
+    box-shadow: 25px 7px 5px var(--light-blue);
+    background-color: white;
+}
+
+section p {
+    margin-bottom: 3px;
+}
+
 #container-all {
     max-width: 605px;
     margin: 0 auto;
@@ -68,11 +100,6 @@ header {
 
 main {
     margin: 0 40px;
-}
-
-section {
-    max-width: 600px;
-    padding: 15px;
 }
 
 .major-section-tab {
