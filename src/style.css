@@ -1,3 +1,4 @@
+/* General CSS */
 :root {
     --dark-gray: #222222;
     --light-gray: #AAAAAA;
@@ -29,6 +30,13 @@ a {
     color: var(--init-green);
 }
 
+#container-all {
+    max-width: 605px;
+    margin: 0 auto;
+}
+
+/* Header and subheading */
+
 #name-headline {
     display: block;
     max-width: 600px;
@@ -42,7 +50,7 @@ a {
     font-size: 1.75rem;
 }
 
-#working-at-init {
+#subheadline-green {
     display: block;
     max-width: 600px;
     color: var(--dark-gray);
@@ -55,15 +63,22 @@ a {
     line-height: 1.3rem;
 }
 
-#working-at-init > a {
+#subheadline-green > a {
     text-decoration: none;
     color: var(--dark-gray);
 }
 
-#working-at-init > a:hover {
-    text-decoration: overline underline;
+#subheadline-green > a:hover {
+    text-decoration: underline;
 }
 
+/* Content area */
+
+main {
+    margin: 0 40px;
+}
+
+/* Section styles ( = Boxes )*/
 .section-headline {
     display: block;
     max-width: 600px;
@@ -98,39 +113,7 @@ section p {
     margin-bottom: 3px;
 }
 
-
-
-#container-all {
-    max-width: 605px;
-    margin: 0 auto;
-}
-
-main {
-    margin: 0 40px;
-}
-
-.major-section-tab {
-    background-color: var(--light-gray);
-    width: 140px;
-}
-
-.major-section-header {
-    padding: 5px;
-    margin-top: 2rem;
-    color: var(--really-white);
-    font-family: "Lexend SemiBold", sans-serif;
-}
-
-.major-section {
-    border: solid 1px var(--almost-white);
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-#work-skills-container {
-    display: flex;
-    flex-direction: row;
-}
+/* Footer */
 
 footer {
     margin-top: 50px;

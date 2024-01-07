@@ -64,3 +64,30 @@ Rarely do you have time to test as thoroughly as is ideal, but I aim to make you
             <section id="play" class="major-section">
             </section>
             -->
+
+
+
+.major-section-tab {
+    background-color: var(--light-gray);
+    width: 140px;
+}
+
+.major-section-header {
+    padding: 5px;
+    margin-top: 2rem;
+    color: var(--really-white);
+    font-family: "Lexend SemiBold", sans-serif;
+}
+
+.major-section {
+    border: solid 1px var(--almost-white);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+
+#work-skills-container {
+    display: flex;
+    flex-direction: row;
+}
