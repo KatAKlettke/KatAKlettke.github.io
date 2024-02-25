@@ -30,6 +30,18 @@ a {
     color: var(--init-green);
 }
 
+hr {
+    width: 80%;
+    margin: 10px auto;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #container-all {
     max-width: 605px;
     margin: 0 auto;
@@ -98,7 +110,7 @@ main {
     color: var(--dark-gray);
     font-family: "Lexend Thin", sans-serif;
     font-size: 0.8rem;
-    padding: 0.3rem;
+    padding: 0.6rem;
     border: 1px solid var(--light-blue-pale);
     box-shadow: 25px 7px 5px var(--light-blue);
     background-color: white;
