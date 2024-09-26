@@ -93,3 +93,86 @@ Rarely do you have time to test as thoroughly as is ideal, but I aim to make you
 }
 
 
+
+        <form class="lang-picker" action="">
+            <fieldset>
+                <legend class="sr-only">Pick a language</legend>
+                <label class="sr-only" for="en">English</label>
+                <input type="radio" name="language" id="en" checked>
+                <label class="sr-only" for="de">Deutsch</label>
+                <input type="radio" name="language" id="de">
+            </fieldset>
+        </form>
+
+
+Old boxes layout with headlines
+
+
+            <section id="about-me">
+                <h3 class="section-headline" id="about-headline">About Me</h3>
+                <div class="section-text" id="about-text">
+                    <p><em>ASD</em> // <em>Cats</em> // <em>Gaming</em> // <em>Programming</em> // <em>Teaching</em> // <em>Testing</em> // <em>TTRPG</em> // <em>Writing</em> // <em>Worldbuilding</em></p>
+                    <p>Avid fans of fantastic worlds and beings, beauty, structure. Always curious and ready to learn more (if it's interesting). Please don't bother me with economics, thank you.</p>
+                    <p>"Practice random acts of kindness and senseless acts of beauty."</p>
+                    <div id="about-me-columns">
+                        <div id="about-me-skills">
+                            <h4>Skills</h4>
+                            <p><a href="./pages/skills.html#skills-soft">Soft Skills</a> // <a href="./pages/skills.html#skills-testing">Testing</a> // <a href="./pages/skills.html#skills-teaching">Teaching</a></p>
+                        </div>
+                        <div id="about-me-play">
+                            <h4>Play</h4>
+                            <p><a href="./pages/play.html#play-worldbuilding">Worldbuilding</a> // <a href="./pages/play.html#play-writing">Writing</a> // <a href="./pages/play.html#play-apps">Apps</a></p>
+                        </div>
+                        <div id="about-me-work">
+                            <h4>Work</h4>
+                            <p><a href="./pages/work.html#work-current">Current: Test Engineer</a> // <a href="./pages/work.html#work-teacher">German Teacher</a> // <a href="./pages/work.html#work-support">1st Level Support</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contact-me">
+                <h3 class="section-headline">Contact Me</h3>
+                <div class="section-text">
+                    <p>kontakt @ &lt;url of this website&gt;</p>
+                    <p><a href="#">linkedin</a> // <a href="#">github</a></p>
+                </div>
+            </section>
+
+
+CSS to go with it
+
+
+/* Section styles ( = Boxes )*/
+.section-headline {
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border: 1px solid var(--light-blue-pale);
+    box-shadow: 25px 7px 5px var(--light-blue);
+    margin-top: 1rem;
+}
+
+.section-text {
+    margin-top: 4px;
+    display: block;
+    max-width: 600px;
+    color: var(--dark-gray);
+    font-family: "Lexend Thin", sans-serif;
+    font-size: 0.8rem;
+    padding: 0.6rem;
+    border: 1px solid var(--light-blue-pale);
+    box-shadow: 25px 7px 5px var(--light-blue);
+    background-color: white;
+}
+
+.section-text em {
+    font-family: "Lexend SemiBold", sans-serif;
+    font-style: normal;
+}
+
+section p {
+    margin-bottom: 3px;
+}

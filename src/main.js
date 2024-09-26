@@ -8,15 +8,15 @@ const storeTheme = function (theme) {
 // set theme when visitor returns
 const setTheme = function() {
     const activeTheme = localStorage.getItem('theme');
-    colorThemes.forEach(themeOption => {
+    colorThemes.forEach((themeOption) => {
         if (themeOption.id === activeTheme) {
             themeOption.checked = true;
         }
     });
 }
 
-colorThemes.forEach(themeOption => {
-    themeOption.addEventListener('click', (e) => {
+colorThemes.forEach((themeOption) => {
+    themeOption.addEventListener('click', () => {
         storeTheme(themeOption.id);
     })
 })
