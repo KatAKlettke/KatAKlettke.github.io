@@ -176,3 +176,18 @@ CSS to go with it
 section p {
     margin-bottom: 3px;
 }
+
+
+
+            <div class="">Skill: Testing</div>
+
+
+
+                <div class="box-inner">
+                    <div class="box-front">
+                        Skill: Testing
+                    </div>
+                    <div class="box-back">
+                        Lorem Ipsum
+                    </div>
+                </div>
