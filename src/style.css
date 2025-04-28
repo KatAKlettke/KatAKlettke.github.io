@@ -8,6 +8,8 @@
     --init-green-light: #47DD80;
     --light-blue: #00ABE7;
     --light-blue-pale: #42CDFF;
+
+    --color-font-primary: #222222;
 }
 
 @font-face {
@@ -26,8 +28,9 @@
     margin: 0;
 }
 
+
 a {
-    color: var(--init-green);
+    text-decoration: none;
 }
 
 hr {
@@ -51,8 +54,9 @@ body {
     margin: 0 auto;
 }
 
-/* Theme picker */
 
+/* Theme picker */
+/* Text only visible to screen readers */
 .sr-only {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -125,11 +129,11 @@ header {
     font-family: "Lexend Thin", sans-serif;
     font-weight: 100;
     padding: 0.3rem;
-    font-size: 1.75rem;
+    font-size: 1.7rem;
     margin-inline: auto;
 }
 
-#subheadline-green {
+#subheadline {
     max-width: 600px;
     margin-left: auto;
     margin-right: 5rem;
@@ -141,26 +145,19 @@ header {
     text-align: right;
 }
 
-#subheadline-green > a {
-    text-decoration: none;
-    color: var(--dark-gray);
-}
-
-#subheadline-green > a:hover {
-    text-decoration: underline;
-}
 
 /* Language Picker */
 
 #lang-picker {
     position: relative;
     top: -15px;
+    left: -200px;
     border: 1px solid blue;
     border-radius: 15px;
     width: fit-content;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 75px;
     margin-inline: auto;
     padding: 25px;
     z-index: 25;
@@ -288,4 +285,30 @@ footer {
 footer > p {
     padding: 5px 0;
     text-align: center;
+}
+
+
+/* Themes */
+.light {
+    a {
+        color: var(--dark-gray);
+    }
+}
+
+.green {
+    a {
+        color: var(--init-green);
+    }
+}
+
+.blue {
+    a {
+        color: var(--light-blue);
+    }
+}
+
+.dark {
+    a {
+        color: var(--light-gray);
+    }
 }
