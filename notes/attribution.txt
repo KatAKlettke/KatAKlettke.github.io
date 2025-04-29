@@ -4,3 +4,14 @@ Swedish Flag Icon: <a href="https://www.flaticon.com/free-icons/sweden" title="s
 Netherlands Flag Icon: <a href="https://www.flaticon.com/free-icons/netherlands" title="netherlands icons">Netherlands icons created by Rifal Hari Topan - Flaticon</a>
 France Flag Icon: <a href="https://www.flaticon.com/free-icons/france" title="france icons">France icons created by Freepik - Flaticon</a>
 Korea Flag Icon: <a href="https://www.flaticon.com/free-icons/south-korea" title="south korea icons">South korea icons created by IconsBox - Flaticon</a>
+
+Icons taken from https://game-icons.net/
+
+Individual credit:
+Beast Eye Icon by Lorc (https://lorcblog.blogspot.com/)
+Lock Spy Icon by Delapouite (https://delapouite.com/)
+Auto Repair Icon by Lorc (https://lorcblog.blogspot.com/)
+Biceps Icon by Delapouite (https://delapouite.com/)
+Castle Icon by Delapouite (https://delapouite.com/)
+Riposte Icon by Andy Meneely (https://www.se.rit.edu/~andy/)
+Round Star Icon by Delapouite (https://delapouite.com/)
