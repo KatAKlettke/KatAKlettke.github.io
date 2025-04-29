@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" type="text/css" href="src/style.css">
 </head>
-<body>
+<body class="dark">
 <div id="container-header">
     <form class="color-picker" action="">
         <fieldset>
@@ -31,17 +31,53 @@
     <div id="lang-picker">
         <div><a href="index-de.html"><img src="./img/germany.png" alt="Icon of a German flag" width="15"> DE</a></div>
         <div><a href="index.html"><img src="./img/united-states.png" alt="Icon of a US flag" width="15"> EN</a></div>
-        <div><a href="#"><img src="./img/sweden.png" alt="Icon of a Swedish flag" width="15"> SV</a></div>
-        <div><a href="#"><img src="./img/netherlands.png" alt="Icon of a Dutch flag" width="15"> NL</a></div>
-        <div><a href="#"><img src="./img/france.png" alt="Icon of a French flag" width="15"> FR</a></div>
-        <div><a href="#"><img src="./img/south-korea.png" alt="Icon of a Korean flag" width="15"> KR</a></div>
+        <div><a href="index-sv.html"><img src="./img/sweden.png" alt="Icon of a Swedish flag" width="15"> SV</a></div>
+        <div style="display:none"><a href="#"><img src="./img/netherlands.png" alt="Icon of a Dutch flag" width="15"> NL</a></div>
+        <div style="display:none"><a href="#"><img src="./img/france.png" alt="Icon of a French flag" width="15"> FR</a></div>
+        <div style="display:none"><a href="#"><img src="./img/south-korea.png" alt="Icon of a Korean flag" width="15"> KR</a></div>
     </div>
 
 </div>
 <div id="container-content">
     <main>
-        <div class="boxes box1">
-            <div class="box-inner">
+        <div class="boxes sidebar">
+            <aside>
+                <ul>
+                    <li id="filter-all-text">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M230.844 47.688c-28.215.083-58.57 2.925-91 8.78C339.666 41.874 441.95 144.504 495.938 292.75c0-143.316-92.67-245.57-265.094-245.063zm-2.656 33.624c-56.703 22.374-97.407 81.194-97.407 150.844 0 49.006 20.153 92.64 51.845 122 22.64 8.588 46.563 10.904 71.406 9.563-26.212-96.096-8.522-185.37 32.5-271-18.534-6.51-37.96-10.382-58.342-11.407zm-41.844 1.782c-43.318 5.686-90.65 23.297-142.5 54.53 24.987 97.103 56.545 155.038 92.78 187.97-15.558-27.26-24.53-59.27-24.53-93.438 0-61.93 29.422-116.84 74.25-149.062zm134.156 25c1.552 6.27 2.92 12.552 4.156 18.844-1.776-.353-3.62-.532-5.5-.532-15.486 0-28.03 12.55-28.03 28.03 0 15.483 12.544 28.033 28.03 28.033 4.33 0 8.432-.967 12.094-2.72 3.26 62.225-9.635 123.823-41.03 179.844 32.597-5.38 66.42-14.65 100.78-22.406 22.463-28.085 36.094-64.734 36.094-105.032 0-8.02-.553-15.9-1.594-23.594-31.27-44.417-66.02-78.693-105-100.468zm-301.875 48.47C36.78 459.957 249.36 479.842 493.063 343.717 306.578 348.125 115.88 532.286 18.625 156.56zm427 82.75c-1.25 33.993-11.342 65.633-27.938 92.28 23.992-4.595 48.14-7.793 72.22-7.813-13.924-30.585-28.636-58.848-44.282-84.467zm41.53 129.81c-127.06 79.076-267.344 111.63-421.03 39.126 130.246 115.856 342.11 82.373 421.03-39.125z"/>
+                        </svg>
+                        Showing All
+                    </li>
+                    <li id="filter-all-skills">
+                        <svg class="icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="currentColor" d="M241.406 21l-15.22 34.75c-7.864.478-15.703 1.472-23.467 2.97l-23.282-30.064-25.094 8.532-.125 38.25c-10.63 5.464-20.817 12.07-30.44 19.78L88.313 79.25 70.156 98.563 88.312 133c-5.852 8.346-10.925 17.072-15.218 26.094l-38.938 1.062-7.906 25.28 31.438 23.158c-1.505 9.38-2.24 18.858-2.282 28.344L20.5 254.625l3.656 26.25 38.313 7.5c2.284 7.982 5.107 15.826 8.5 23.5L45.72 343.22l14.093 22.436 39.25-9.187c2.47 2.895 5.037 5.757 7.718 8.53 5.643 5.835 11.565 11.206 17.72 16.125l-7.625 39.313 22.938 13.25 29.968-26.094c8.606 3.462 17.435 6.23 26.407 8.312l9.782 38.406 26.405 2.157 15.875-36.22c10.97-.66 21.904-2.3 32.656-4.938l25.22 29.22 24.593-9.844-.72-14.813-57.406-43.53c-16.712 4.225-34.042 5.356-51.063 3.436-31.754-3.58-62.27-17.92-86.218-42.686-54.738-56.614-53.173-146.67 3.438-201.406 27.42-26.513 62.69-39.963 98-40.344 37.59-.406 75.214 13.996 103.438 43.187 45.935 47.512 52.196 118.985 19.562 173.095l31.97 24.25c3.997-6.28 7.594-12.75 10.75-19.375l38.655-1.063 7.906-25.28-31.217-23c1.513-9.457 2.262-19.035 2.28-28.594l34.688-17.625-3.655-26.25-38.28-7.5c-3.196-10.993-7.444-21.762-12.75-32.125l22.81-31.594-15.25-21.657-37.56 10.906c-.472-.5-.93-1.007-1.408-1.5-5.998-6.205-12.33-11.89-18.937-17.064l7.188-37.125L334 43.78l-28.5 24.814c-9.226-3.713-18.702-6.603-28.313-8.75l-9.343-36.688L241.406 21zM183.25 174.5c-10.344.118-20.597 2.658-30 7.28l45.22 34.314c13.676 10.376 17.555 30.095 7.06 43.937-10.498 13.85-30.656 15.932-44.53 5.408l-45.188-34.282c-4.627 24.793 4.135 51.063 25.594 67.344 19.245 14.597 43.944 17.33 65.22 9.688l4.78-1.72 4.03 3.063 135.19 102.564 4.03 3.062-.344 5.063c-1.637 22.55 7.59 45.61 26.844 60.217 21.46 16.28 49.145 17.63 71.78 6.5l-45.186-34.28c-13.874-10.526-17.282-30.506-6.78-44.344 10.5-13.84 30.537-15.405 44.217-5.032l45.188 34.283c4.616-24.784-4.11-51.067-25.563-67.344-19.313-14.658-43.817-17.562-64.968-10.033l-4.75 1.688-4.03-3.063-135.19-102.562-4.03-3.063.344-5.03c1.55-22.387-7.85-45.194-27.157-59.845-12.544-9.516-27.222-13.978-41.78-13.812zm43.563 90.25l163.875 124.344L379.406 404 215.5 279.625l11.313-14.875z"/>
+                        </svg>
+                        Hide Skills
+                    </li>
+                    <li id="filter-all-strengths">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M211.832 39.06c-15.022 15.31-15.894 22.83-23.473 43.903 2.69 9.14 5.154 16.927 9.148 25.117 5.158.283 10.765.47 15.342.43-6.11-10.208-8.276-19.32-4.733-35.274 4.3 19.05 12.847 29.993 21.203 34.332 3.032-.334 5.957-.714 8.776-1.146-6.255-10.337-8.494-19.47-4.914-35.588 3.897 17.27 11.287 27.876 18.86 32.94 4.658-1.043 9.283-2.243 13.927-3.534-5.517-9.69-7.36-18.692-3.97-33.957 3.357 14.876 9.307 24.81 15.732 30.516 5.095-1.57 9.296-2.898 13.852-4.347-.685-5.782-.416-12.187 1.064-19.115l1.883-8.8 17.603 3.76-1.88 8.804c-3.636 17.008 1.324 24.42 7.306 28.666 5.98 4.244 14.69 3.46 16.03 2.6l7.576-4.86 9.72 15.15c-3.857 2.34-7.9 5.44-11.822 7.06 18.65 27.678 32.183 61.465 24.756 93.55-2.365 9.474-6.03 18.243-11.715 24.986 12.725 12.13 21.215 22.026 31.032 34.5-3.713-2.387-7.586-4.844-11.692-7.37-11.397-7.01-23.832-14.214-34.98-19.802-16.012-7.8-31.367-18.205-47.73-20.523-22.552-2.967-46.27 4.797-73.32 21.06 7.872 8.72 13.282 15.474 20.312 24.288-6.98-4.338-14.652-9.07-23.16-14.23-32.554-17.48-65.39-48.227-100.438-49.99-30.56-1.092-59.952 14.955-89.677 38.568L18 254.293V494h31.963c45.184-17.437 80.287-57.654 97.03-94.52l.25-.564.325-.52c9.463-15.252 11.148-29.688 16.79-44.732 5.645-15.044 16.907-29.718 41.884-38.756 4.353-2.16 5.07-1.415 8.633 1.395 30.468 24.01 57.29 32.02 83.24 32.35 32.61-1.557 58.442-9.882 85.682-19.38-3.966 3.528-8.77 7.21-13.986 10.762-15.323 10.436-34.217 19.928-46.304 24.8-14.716 2.006-28.36 2.416-41.967.616-9.96 12.09-25.574 20.358-37.35 26.673 63.92 14.023 115.88.91 167.386-22.896-9.522-1.817-19.008-3.692-27.994-5.42 31.634-4.422 64.984-3.766 94.705-3.53 4.084-.02 7.213-.453 8.7-.886 14.167-51.072-4.095-97.893-34.294-145.216-30.263-47.425-72.18-94.107-101.896-143.04-21.1-17.257-48.6-31.455-77.522-46.175-20.386 4.25-41.026 9.336-61.443 14.1zm85.385 70.49c-11.678 3.6-23.71 7.425-33.852 10.012 2.527 4.93 3.735 10.664 3.395 16.202 11.028.877 21.082-2.018 28.965-6.356 4.845-2.666 8.74-6.048 11.414-8.96-3.854-2.735-7.26-6.41-9.923-10.9zm-54.213 14.698c-11.76 1.143-24.59 2.362-35.06 2.236 2.39 4.772 3.78 12.067 8.51 14.84 11.18 1.164 20.6 1.997 29.91-1.746 5.435-3.214 1.818-15.058-3.36-15.33zm-34.98 209.332c-17.593 7.233-22.586 15.14-26.813 26.406-3.998 10.66-6.227 25.076-14.48 41.014 32.29-6.38 69.625-21.23 93.852-40.088-17.017-5.098-34.553-13.852-52.557-27.332zm9.318 71.385c-18.723 7.237-40.836 16.144-59.696 14.062C143.774 446.68 124.012 474.03 91.762 494h84.68c21.564-29.798 38.067-56.575 40.9-89.035z"/>
+                        </svg>
+                        Hide Strengths
+                    </li>
+                    <li id="filter-all-projects">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M255.95 27.11L180.6 107.614l150.7 1.168-75.35-81.674h-.003zM25 109.895v68.01l19.412 25.99h71.06l19.528-26v-68h-14v15.995h-18v-15.994H89v15.995H71v-15.994H57v15.995H39v-15.994H25zm352 0v68l19.527 26h71.06L487 177.906v-68.01h-14v15.995h-18v-15.994h-14v15.995h-18v-15.994h-14v15.995h-18v-15.994h-14zm-176 15.877V260.89h110V126.63l-110-.857zm55 20.118c8 0 16 4 16 12v32h-32v-32c0-8 8-12 16-12zM41 221.897V484.89h78V221.897H41zm352 0V484.89h78V221.897h-78zM56 241.89c4 0 8 4 8 12v32H48v-32c0-8 4-12 8-12zm400 0c4 0 8 4 8 12v32h-16v-32c0-8 4-12 8-12zm-303 37v23h-16v183h87v-55c0-24 16-36 32-36s32 12 32 36v55h87v-183h-16v-23h-14v23h-18v-23h-14v23h-18v-23h-14v23h-18v-23h-14v23h-18v-23h-14v23h-18v-23h-14v23h-18v-23h-14zm-49 43c4 0 8 4 8 12v32H96v-32c0-8 4-12 8-12zm72 0c8 0 16 4 16 12v32h-32v-32c0-8 8-12 16-12zm80 0c8 0 16 4 16 12v32h-32v-32c0-8 8-12 16-12zm80 0c8 0 16 4 16 12v32h-32v-32c0-8 8-12 16-12zm72 0c4 0 8 4 8 12v32h-16v-32c0-8 4-12 8-12zm-352 64c4 0 8 4 8 12v32H48v-32c0-8 4-12 8-12zm400 0c4 0 8 4 8 12v32h-16v-32c0-8 4-12 8-12z"/>
+                        </svg>
+                        Hide Projects
+                    </li>
+                    <li id="filter-all-interests">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="currentColor" d="M264.8 14.86 243.5 130.7 133.8 98.86l64.3 83.04C8.624 261.7 55.82 556 383 486.7 274.4 499.9 66.42 382 240.6 284.1l7.2 73.1L305 258l114.4 26.8-74.7-85.2 80.3-69.2-111 5.5z"/>
+                        </svg>
+                        Hide Interests
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="boxes small-boxes box1">
+            <div class="box-inner" id="skill-testing">
                 <div class="box-front">
                     Skill: Testing
                 </div>
@@ -50,17 +86,19 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box2">
-            <div class="box-inner">
+        <div class="boxes small-boxes box2">
+            <div class="box-inner" id="skill-python">
                 <div class="box-front">
                     Skill: Python
                 </div>
-                <div class="box-back">2/5 *</div>
+                <div class="box-back">
+                    2/5
+                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 38.013c-22.458 0-66.472 110.3-84.64 123.502-18.17 13.2-136.674 20.975-143.614 42.334-6.94 21.358 84.362 97.303 91.302 118.662 6.94 21.36-22.286 136.465-4.116 149.665 18.17 13.2 118.61-50.164 141.068-50.164 22.458 0 122.9 63.365 141.068 50.164 18.17-13.2-11.056-128.306-4.116-149.665 6.94-21.36 98.242-97.304 91.302-118.663-6.94-21.36-125.444-29.134-143.613-42.335-18.168-13.2-62.182-123.502-84.64-123.502z"/></svg>
+                </div>
             </div>
-
         </div>
-        <div class="boxes box3">
-            <div class="box-inner">
+        <div class="boxes small-boxes box3">
+            <div class="box-inner" id="strength-patterns">
                 <div class="box-front">
                     Strength: Pattern Recognition
                 </div>
@@ -70,8 +108,8 @@
             </div>
 
         </div>
-        <div class="boxes box4">
-            <div class="box-inner">
+        <div class="boxes small-boxes box4">
+            <div class="box-inner" id="strength-hyperfocus">
                 <div class="box-front">
                     Strength: Autistic Hyperfocus
                 </div>
@@ -80,8 +118,8 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box5">
-            <div class="box-inner">
+        <div class="boxes small-boxes box5">
+            <div class="box-inner" id="interest-programming">
                 <div class="box-front">
                     Special Interest: Programming
                 </div>
@@ -90,8 +128,8 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box6">
-            <div class="box-inner">
+        <div class="boxes small-boxes box6">
+            <div class="box-inner" id="interest-neurolinguistics">
                 <div class="box-front">
                     Special Interest: Neurolinguistics
                 </div>
@@ -100,8 +138,8 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box7">
-            <div class="box-inner">
+        <div class="boxes small-boxes box7">
+            <div class="box-inner" id="interest-indoeuropean">
                 <div class="box-front">
                     Special Interest: Indo-European Linguistics
                 </div>
@@ -110,8 +148,8 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box8">
-            <div class="box-inner">
+        <div class="boxes small-boxes box8">
+            <div class="box-inner" id="interest-europeanmiddleages">
                 <div class="box-front">
                     Special Interest: Early Continental European Middle Ages
                 </div>
@@ -120,18 +158,18 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box9">
-            <div class="box-inner">
+        <div class="boxes small-boxes box9">
+            <div class="box-inner" id="interest-medievaleurolit">
                 <div class="box-front">
-                    Special Interest: European Medieval Literature
+                    Special Interest: Medieval European Literature
                 </div>
                 <div class="box-back">
                     I love reading medieval heroic tales from all across Europe.
                 </div>
             </div>
         </div>
-        <div class="boxes box10">
-            <div class="box-inner">
+        <div class="boxes small-boxes box10">
+            <div class="box-inner" id="interest-fantasy-worldbuilding">
                 <div class="box-front">
                     Special Interest: Fantasy Worldbuilding
                 </div>
@@ -140,13 +178,36 @@
                 </div>
             </div>
         </div>
-        <div class="boxes box11">
-            <div class="box-inner">
+        <div class="boxes small-boxes box11">
+            <div class="box-inner" id="strength-tenacity">
                 <div class="box-front">
                     Strength: Tenacity
                 </div>
                 <div class="box-back">
                     If you ask me to come back later, I will.
+                </div>
+            </div>
+        </div>
+        <div class="boxes small-boxes box12">
+            <div class="box-inner" id="project-terrazas">
+                <div class="box-front">
+                    Project: Terrazas Dart Club Round Robin Calculator
+                </div>
+                <div class="box-back">
+                    <a href="https://kataklettke.github.io/terrazas-darts-testing/">Are we too many for a Round Robin style tournament?</a>
+                </div>
+            </div>
+        </div>
+        <div class="boxes small-boxes box13">
+            <div class="box-inner" id="skill-js">
+                <div class="box-front">
+                    Skill: JavaScript
+                </div>
+                <div class="box-back">
+                    2/5
+                    <svg class="icon-small" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor" d="M256 38.013c-22.458 0-66.472 110.3-84.64 123.502-18.17 13.2-136.674 20.975-143.614 42.334-6.94 21.358 84.362 97.303 91.302 118.662 6.94 21.36-22.286 136.465-4.116 149.665 18.17 13.2 118.61-50.164 141.068-50.164 22.458 0 122.9 63.365 141.068 50.164 18.17-13.2-11.056-128.306-4.116-149.665 6.94-21.36 98.242-97.304 91.302-118.663-6.94-21.36-125.444-29.134-143.613-42.335-18.168-13.2-62.182-123.502-84.64-123.502z"/>
+                    </svg>
                 </div>
             </div>
         </div>
