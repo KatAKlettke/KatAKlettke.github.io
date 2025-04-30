@@ -9,17 +9,15 @@
 
     /* Light Theme */
     --light-one: #AAAAAA;
-    --light-two: #BBBBBB;
-    --light-three: #CCCCCC;
-    --light-four: #DDDDDD;
-    --light-five: #EEEEEE;
+    --light-two: #CCCCCC;
+    --light-three: #DDDDDD;
+    --light-four: #EEEEEE;
 
     /* Green Theme */
     --green-one: #004000;
     --green-two: #006E1E;
     --green-three: #009D3C;
-    --green-four: #44CE6B;
-    --green-five: #B6DC2B;
+    --green-four: #B6DC2B;
 
     /* Blue Theme */
     --blue-five: #FFFD95;
@@ -47,10 +45,6 @@
 
 a {
     text-decoration: none;
-}
-
-a.with-decoration {
-    text-decoration: underline;
 }
 
 body {
@@ -103,31 +97,10 @@ body {
     border-radius: 50%;
 }
 
-/*
-
-.color-picker input[type="radio"]#light {
-    --radio-color: var(--light-five);
-}
-
-.color-picker input[type="radio"]#green {
-    --radio-color: var(--green-three);
-}
-
-.color-picker input[type="radio"]#blue {
-    --radio-color: var(--blue-three);
-}
-
-.color-picker input[type="radio"]#dark {
-    --radio-color: var(--dark-one);
-}
-
- */
-
 /* Header and subheading */
 
 header {
     position: relative;
-    border: 1px solid var(--dark-three);
     width: 50vw;
     min-width: 900px;
     margin-left: -10px;
@@ -281,7 +254,6 @@ main {
 }
 
 .box-inner {
-    border: 1px solid black;
     position: relative;
     width: 100%;
     height: 100%;
@@ -377,7 +349,7 @@ footer > p {
     }
 
     .color-picker input[type="radio"]:checked {
-        background-color: var(--light-five);
+        background-color: var(--light-four);
     }
 
     .color-picker input[type="radio"]#green {
@@ -393,11 +365,11 @@ footer > p {
     }
 
     .color-picker input[type="radio"]#light {
-        --radio-color: var(--light-five);
+        --radio-color: var(--light-four);
     }
 
     header {
-        background-color: var(--light-five);
+        background-color: var(--light-four);
         border: 1px solid var(--dark-one);
     }
 
@@ -410,12 +382,12 @@ footer > p {
     }
 
     #lang-picker {
-        background-color: var(--light-five);
+        background-color: var(--light-four);
         border: 1px solid var(--dark-one);
     }
 
     .sidebar {
-        background-color: var(--light-five);
+        background-color: var(--light-four);
         border: 1px solid var(--dark-one);
     }
 
@@ -424,15 +396,15 @@ footer > p {
     }
 
     .box-front {
-        background-color: var(--light-five);
-    }
-
-    .box-back {
         background-color: var(--light-four);
     }
 
+    .box-back {
+        background-color: var(--light-three);
+    }
+
     footer {
-        background-color: var(--light-five);
+        background-color: var(--light-four);
         border-top: 1px solid var(--dark-one);
     }
 }
@@ -447,7 +419,7 @@ footer > p {
     }
 
     .color-picker > fieldset {
-        background-color: var(--green-five);
+        background-color: var(--green-four);
     }
 
     .color-picker input[type="radio"]:checked  {
@@ -455,11 +427,11 @@ footer > p {
     }
 
     .color-picker input[type="radio"]#green {
-        --radio-color: var(--green-one);
+        --radio-color: var(--green-two);
     }
 
     .color-picker input[type="radio"]#light {
-        --radio-color: var(--light-five);
+        --radio-color: var(--light-four);
     }
 
     .color-picker input[type="radio"]#blue {
@@ -476,25 +448,25 @@ footer > p {
     }
 
     #name-headline {
-        color: var(--green-five)
+        color: var(--green-four)
     }
 
     #subheadline {
-        color: var(--green-five);
+        color: var(--green-four);
     }
 
     #lang-picker {
-        background-color: var(--green-five);
+        background-color: var(--green-four);
     }
 
     .sidebar {
         background-color: var(--green-two);
         border: 2px solid var(--green-one);
-        color: var(--green-five);
+        color: var(--green-four);
     }
 
     .box-inner {
-        color: var(--green-five);
+        color: var(--green-four);
         border: 2px solid var(--green-one);
     }
 
@@ -507,11 +479,11 @@ footer > p {
 
     footer {
         background-color: var(--green-one);
-        color: var(--green-five);
+        color: var(--green-four);
     }
 
     footer a {
-        color: var(--green-five);
+        color: var(--green-four);
     }
 }
 
@@ -537,7 +509,7 @@ footer > p {
     }
 
     .color-picker input[type="radio"]#light {
-        --radio-color: var(--light-five);
+        --radio-color: var(--light-four);
     }
 
     .color-picker input[type="radio"]#green {
@@ -619,7 +591,7 @@ footer > p {
     }
 
     .color-picker input[type="radio"]#light {
-        --radio-color: var(--light-three);
+        --radio-color: var(--light-two);
     }
 
     .color-picker input[type="radio"]#blue {

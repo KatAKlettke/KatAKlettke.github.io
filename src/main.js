@@ -39,28 +39,26 @@ colorThemes.forEach((themeOption) => {
 filterAllElement.addEventListener('click', () => {
     console.log('Filter All triggered');
     toggleAllFilter();
-    updateFilters();
 });
 
 filterSkillsElement.addEventListener('click', () => {
     console.log('Filter Skills triggered');
     toggleSkillFilter();
-    updateFilters();
 });
 
 filterStrengthsElement.addEventListener('click', () => {
+    console.log('Filter Strengths triggered');
     toggleStrengthFilter();
-    updateFilters();
 });
 
 filterProjectsElement.addEventListener('click', () => {
+    console.log('Filter Projects triggered');
     toggleProjectFilter();
-    updateFilters();
 });
 
 filterInterestsElement.addEventListener('click', () => {
+    console.log('Filter Interests triggered');
     toggleInterestFilter();
-    updateFilters();
 })
 
 /**
@@ -131,6 +129,10 @@ function setTheme(theme) {
 function toggleAllFilter() {
     if (!allIsShown) {
         allIsShown = true;
+        skillIsShown = true;
+        strengthIsShown = true;
+        projectIsShown = true;
+        interestIsShown = true;
     }
     updateFilters();
 }
