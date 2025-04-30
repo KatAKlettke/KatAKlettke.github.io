@@ -27,11 +27,11 @@ const greenBody = "background-color: #006e1e;background-image: url(\"data:image/
 const blueBody = "background-color:#50d5f3;background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%2300abe7' fill-opacity='0.4' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E\");"
 const darkBody = "background-color: #222222;background-image: url(\"data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"
 
-let allIsShown = false;
-let skillIsShown = true;
-let strengthIsShown = true;
-let projectIsShown = true;
-let interestIsShown = false;
+localStorage.setItem('allIsShown', 'true');
+localStorage.setItem('skillIsShown', 'true');
+localStorage.setItem('strengthIsShown', 'true');
+localStorage.setItem('projectIsShown', 'true');
+localStorage.setItem('interestIsShown', 'true');
 
 // Event Listeners
 /**
@@ -95,7 +95,8 @@ const setRememberedTheme = function() {
 }
 
 /**
- * Sets the class of the body element to the current theme and adds a style for the background to the body element
+ * Sets the class of the body element to the current theme and adds a style for the background to the
+ * body element
  * @param theme string, theme ID
  */
 function setTheme(theme) {
@@ -131,84 +132,87 @@ function setTheme(theme) {
 
 // Filter Toggles
 /**
- * Toggles the allIsShown Bool and calls updateFilters(). Does not change anything if allIsShown is true, since
- * what would it be hiding?
+ * Toggles the allIsShown local property and calls updateFilters(). Does not change anything if allIsShown
+ * is 'true', since what would it be hiding?
  */
 function toggleAllFilter() {
-    if (!allIsShown) {
-        allIsShown = true;
-        skillIsShown = true;
-        strengthIsShown = true;
-        projectIsShown = true;
-        interestIsShown = true;
+    if (localStorage.getItem('allIsShown') === 'false') {
+        localStorage.setItem('allIsShown', 'true');
+        localStorage.setItem('skillIsShown', 'true');
+        localStorage.setItem('strengthIsShown', 'true');
+        localStorage.setItem('projectIsShown', 'true');
+        localStorage.setItem('interestIsShown', 'true');
     }
     updateFilters();
 }
 
 /**
- * Checks if all single-filter Bools are true and if so, sets allIsShown to true as well
+ * Checks if all single-filter local properties are true and if so, sets allIsShown to true as well
  */
 function checkForAllFiltersTrue() {
-    if (skillIsShown && strengthIsShown && projectIsShown && interestIsShown) {
-        allIsShown = true;
+    if (localStorage.getItem('skillIsShown') === 'true'
+        && localStorage.getItem('strengthIsShown') === 'true'
+        && localStorage.getItem('projectIsShown') === 'true'
+        && localStorage.getItem('interestIsShown') === 'true') {
+        localStorage.setItem('allIsShown','true');
     }
 }
 
 /**
- * Toggles the skillIsShown Bool and calls updateFilters(). If skillIsShown gets toggled to false, also
- * set allIsShown to false. If skillIsShown gets toggled to true, call checkForAllFiltersTrue()
+ * Toggles the skillIsShown local property and calls updateFilters(). If skillIsShown gets set
+ * to false, also set allIsShown to false. If skillIsShown gets set to true, call checkForAllFiltersTrue()
  */
 function toggleSkillFilter() {
-    if (skillIsShown) {
-        skillIsShown = false;
-        allIsShown = false;
+    if (localStorage.getItem('skillIsShown') === 'true') {
+        localStorage.setItem('skillIsShown', 'false');
+        localStorage.setItem('allIsShown', 'false');
     } else {
-        skillIsShown = true;
+        localStorage.setItem('skillIsShown', 'true');
         checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
 /**
- * Toggles the strengthIsShown Bool and calls updateFilters(). If strengthIsShown gets toggled to false,
- * also set allIsShown to false. If strengthIsShown gets toggled to true, call checkForAllFiltersTrue()
+ * Toggles the strengthIsShown local property and calls updateFilters(). If strengthIsShown gets set to false,
+ * also set allIsShown to false. If strengthIsShown gets set to true, call checkForAllFiltersTrue()
  */
 function toggleStrengthFilter() {
-    if (strengthIsShown) {
-        strengthIsShown = false;
-        allIsShown = false;
+    if (localStorage.getItem('strengthIsShown') === 'true') {
+        localStorage.setItem('strengthIsShown', 'false');
+        localStorage.setItem('allIsShown', 'false');
     } else {
-        strengthIsShown = true;
+        localStorage.setItem('strengthIsShown','true');
         checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
 /**
- * Toggles the projectIsShown Bool and calls updateFilters(). If projectIsShown gets toggled to false,
- * also set allIsShown to false. If projectIsShown gets toggled to true, call checkForAllFiltersTrue()
+ * Toggles the projectIsShown local property and calls updateFilters(). If projectIsShown gets set to false,
+ * also set allIsShown to false. If projectIsShown gets set to true, call checkForAllFiltersTrue()
  */
 function toggleProjectFilter() {
-    if (projectIsShown) {
-        projectIsShown = false;
-        allIsShown = false;
+    if (localStorage.getItem('projectIsShown') === 'true') {
+        localStorage.setItem('projectIsShown', 'false');
+        localStorage.setItem('allIsShown', 'false');
     } else {
-        projectIsShown = true;
+        localStorage.setItem('projectIsShown', 'true');
         checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
 /**
- * Toggles the interestIsShown Bool and calls updateFilters(). If interestIsShown gets toggled to false,
- * also set allIsShown to false. If interestIsShown gets toggled to true, call checkForAllFiltersTrue()
+ * Toggles the interestIsShown local property and calls updateFilters(). If interestIsShown gets set to false,
+ * also set allIsShown to false. If interestIsShown gets set to true, call checkForAllFiltersTrue()
  */
 function toggleInterestFilter() {
-    if (interestIsShown) {
-        interestIsShown = false;
-        allIsShown = false;
+    if (localStorage.getItem('interestIsShown') === 'true') {
+        localStorage.setItem('interestIsShown', 'false');
+        localStorage.setItem('allIsShown', 'false');
     } else {
-        interestIsShown = true;
+        localStorage.setItem('interestIsShown', 'true');
         checkForAllFiltersTrue();
     }
     updateFilters();
@@ -296,10 +300,10 @@ function deactivateInterests() {
 }
 
 /**
- * Checks all filter state bools and calls the relevant functions to activate or deactivate filters
+ * Checks all filter state local properties and calls the relevant functions to activate or deactivate filters
  */
 function updateFilters() {
-    if (allIsShown) {
+    if (localStorage.getItem('allIsShown') === 'true') {
         document.getElementById('open-eye').removeAttribute('style');
         document.getElementById('hidden-eye').setAttribute('style', 'display:none;');
         document.querySelector('#filter-all-text > span').innerHTML = 'Showing All';
@@ -314,25 +318,25 @@ function updateFilters() {
         document.getElementById('hidden-eye').removeAttribute('style');
         document.querySelector('#filter-all-text > span').innerHTML = 'Show All';
 
-        if (skillIsShown) {
+        if (localStorage.getItem('skillIsShown') === 'true') {
             activateSkills();
         } else {
             deactivateSkills();
         }
 
-        if (strengthIsShown) {
+        if (localStorage.getItem('strengthIsShown') === 'true') {
             activateStrengths();
         } else {
             deactivateStrengths();
         }
 
-        if (projectIsShown) {
+        if (localStorage.getItem('projectIsShown') === 'true') {
             activateProjects();
         } else {
             deactivateProjects();
         }
 
-        if (interestIsShown) {
+        if (localStorage.getItem('interestIsShown') === 'true') {
             activateInterests();
         } else {
             deactivateInterests();
@@ -340,6 +344,8 @@ function updateFilters() {
     }
     assignRandomSpotToCard();
 }
+
+// WIP Section
 
 // Assign random number to a card
 const assignRandomSpotToCard =  () => {
@@ -371,7 +377,7 @@ const assignRandomSpotToCard =  () => {
     }
 }
 
-function onStartup() {
+const onStartup = function () {
     setRememberedTheme();
     updateFilters();
 }
