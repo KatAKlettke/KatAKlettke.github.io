@@ -614,6 +614,18 @@ footer > p {
          background-color: var(--dark-one);
     }
 
+    .color-picker input[type="radio"]#green {
+        --radio-color: var(--green-three);
+    }
+
+    .color-picker input[type="radio"]#light {
+        --radio-color: var(--light-three);
+    }
+
+    .color-picker input[type="radio"]#blue {
+        --radio-color: var(--blue-two);
+    }
+
     header {
         border: 3px solid var(--dark-four);
         background-color: var(--dark-two);

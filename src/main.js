@@ -37,11 +37,13 @@ colorThemes.forEach((themeOption) => {
 })
 
 filterAllElement.addEventListener('click', () => {
+    console.log('Filter All triggered');
     toggleAllFilter();
     updateFilters();
 });
 
 filterSkillsElement.addEventListener('click', () => {
+    console.log('Filter Skills triggered');
     toggleSkillFilter();
     updateFilters();
 });
@@ -123,7 +125,8 @@ function setTheme(theme) {
 
 // Filter Toggles
 /**
- * Toggles the allIsShown Bool and calls updateFilters()
+ * Toggles the allIsShown Bool and calls updateFilters(). Does not change anything if allIsShown is true, since
+ * what would it be hiding?
  */
 function toggleAllFilter() {
     if (!allIsShown) {
@@ -133,40 +136,70 @@ function toggleAllFilter() {
 }
 
 /**
- * Toggles the skillIsShown Bool and calls updateFilters()
+ * Checks if all single-filter Bools are true and if so, sets allIsShown to true as well
+ */
+function checkForAllFiltersTrue() {
+    if (skillIsShown && strengthIsShown && projectIsShown && interestIsShown) {
+        allIsShown = true;
+    }
+}
+
+/**
+ * Toggles the skillIsShown Bool and calls updateFilters(). If skillIsShown gets toggled to false, also
+ * set allIsShown to false. If skillIsShown gets toggled to true, call checkForAllFiltersTrue()
  */
 function toggleSkillFilter() {
     if (skillIsShown) {
         skillIsShown = false;
+        allIsShown = false;
     } else {
         skillIsShown = true;
+        checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
+/**
+ * Toggles the strengthIsShown Bool and calls updateFilters(). If strengthIsShown gets toggled to false,
+ * also set allIsShown to false. If strengthIsShown gets toggled to true, call checkForAllFiltersTrue()
+ */
 function toggleStrengthFilter() {
     if (strengthIsShown) {
         strengthIsShown = false;
+        allIsShown = false;
     } else {
         strengthIsShown = true;
+        checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
+/**
+ * Toggles the projectIsShown Bool and calls updateFilters(). If projectIsShown gets toggled to false,
+ * also set allIsShown to false. If projectIsShown gets toggled to true, call checkForAllFiltersTrue()
+ */
 function toggleProjectFilter() {
     if (projectIsShown) {
         projectIsShown = false;
+        allIsShown = false;
     } else {
         projectIsShown = true;
+        checkForAllFiltersTrue();
     }
     updateFilters();
 }
 
+/**
+ * Toggles the interestIsShown Bool and calls updateFilters(). If interestIsShown gets toggled to false,
+ * also set allIsShown to false. If interestIsShown gets toggled to true, call checkForAllFiltersTrue()
+ */
 function toggleInterestFilter() {
     if (interestIsShown) {
         interestIsShown = false;
+        allIsShown = false;
     } else {
         interestIsShown = true;
+        checkForAllFiltersTrue();
     }
     updateFilters();
 }
