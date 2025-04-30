@@ -1,5 +1,3 @@
-const colorThemes = document.querySelectorAll('[name="theme"]');
-
 const skillList = document.querySelectorAll('[id^="skill-"]');
 const strengthList = document.querySelectorAll('[id^="strength-"]');
 const projectList = document.querySelectorAll('[id^="project-"]');
@@ -12,6 +10,16 @@ const filterStrengthsElement = document.getElementById('filter-all-strengths');
 const filterProjectsElement = document.getElementById('filter-all-projects');
 const filterInterestsElement = document.getElementById('filter-all-interests');
 
+// Card Elements Display
+const allCards = document.querySelectorAll('.small-boxes');
+
+let cardIdList = [];
+allCards.forEach(card => {
+    cardIdList.push(card.firstElementChild.getAttribute('id'));
+});
+
+// Theme Stuff
+const colorThemes = document.querySelectorAll('[name="theme"]');
 const themeElement = document.body;
 
 // Inline style values for the theme backgrounds
@@ -329,6 +337,37 @@ function updateFilters() {
         } else {
             deactivateInterests();
         }
+    }
+    assignRandomSpotToCard();
+}
+
+// Assign random number to a card
+const assignRandomSpotToCard =  () => {
+    console.log('entering assignment')
+    console.log(cardIdList);
+    // filter out all cards that are not getting displayed
+    cardIdList.forEach(cardId => {
+        if (document.getElementById(cardId).getAttribute('style') === 'display:none;') {
+            cardIdList.splice(cardIdList.indexOf(cardId), 1)
+        }
+    });
+
+    console.log(cardIdList);
+    let cardNumberToDistribute = cardIdList.length;
+
+    // Make a for-loop with an index starting at 1
+    for (let i = 1; i < (cardNumberToDistribute.length + 1); i += 1) {
+        console.log('entering loop');
+        // Take a random number from the current number of cards
+        let randomCard= Math.floor(Math.random() * cardIdList.length);
+        // access the id at that index in cardIdList
+        let elementToSortIn = cardIdList[randomCard];
+        // generate current box number
+        let currentBoxNumber = 'box' + i;
+        // add box number as an id to the parent element of the element with the chosen id
+        document.getElementById(elementToSortIn).parentElement.setAttribute('id', currentBoxNumber);
+        // remove id from cardIdList
+        cardIdList.splice(randomCard, 1);
     }
 }
 
