@@ -13,10 +13,9 @@ const filterInterestsElement = document.getElementById('filter-all-interests');
 // Card Elements Display
 const allCards = document.querySelectorAll('.small-boxes');
 
-let cardIdList = [];
-allCards.forEach(card => {
-    cardIdList.push(card.firstElementChild.getAttribute('id'));
-});
+const fixedCardIdList = [...allCards].map(element => element.firstElementChild.getAttribute('id'));
+// this converts a NodeListOf<Element> to an array (spread syntax)
+// Alternative: const fixedCardIdList = Array.from(allCards).map(element => element.firstElementChild.getAttribute('id'));
 
 // Theme Stuff
 const colorThemes = document.querySelectorAll('[name="theme"]');
@@ -225,7 +224,7 @@ function toggleInterestFilter() {
 function activateSkills() {
     document.querySelector('#filter-all-skills span').innerHTML = 'Hide Skills';
     skillList.forEach((skill) => {
-        skill.removeAttribute('style');
+        skill.parentElement.removeAttribute('style');
     });
 }
 
@@ -235,7 +234,7 @@ function activateSkills() {
 function deactivateSkills() {
     document.querySelector('#filter-all-skills > span').innerHTML = 'Show Skills';
     skillList.forEach((skill) => {
-        skill.setAttribute('style', 'display:none;');
+        skill.parentElement.setAttribute('style', 'display:none;');
     });
 }
 
@@ -245,7 +244,7 @@ function deactivateSkills() {
 function activateStrengths() {
     document.querySelector('#filter-all-strengths > span').innerHTML = 'Hide Strengths';
     strengthList.forEach((strength) => {
-        strength.removeAttribute('style');
+        strength.parentElement.removeAttribute('style');
     })
 }
 
@@ -255,7 +254,7 @@ function activateStrengths() {
 function deactivateStrengths() {
     document.querySelector('#filter-all-strengths > span').innerHTML = 'Show Strengths';
     strengthList.forEach((strength) => {
-        strength.setAttribute('style', 'display:none;');
+        strength.parentElement.setAttribute('style', 'display:none;');
     });
 }
 
@@ -265,7 +264,7 @@ function deactivateStrengths() {
 function activateProjects() {
     document.querySelector('#filter-all-projects > span').innerHTML = 'Hide Projects';
     projectList.forEach((project) => {
-        project.removeAttribute('style');
+        project.parentElement.removeAttribute('style');
     });
 }
 
@@ -275,7 +274,7 @@ function activateProjects() {
 function deactivateProjects() {
     document.querySelector('#filter-all-projects > span').innerHTML = 'Show Projects';
     projectList.forEach((project) => {
-       project.setAttribute('style', 'display:none;');
+       project.parentElement.setAttribute('style', 'display:none;');
     })
 }
 
@@ -285,7 +284,7 @@ function deactivateProjects() {
 function activateInterests() {
     document.querySelector('#filter-all-interests > span').innerHTML = 'Hide Interests';
     interestList.forEach((interest) => {
-        interest.removeAttribute('style');
+        interest.parentElement.removeAttribute('style');
     })
 }
 
@@ -295,7 +294,7 @@ function activateInterests() {
 function deactivateInterests() {
     document.querySelector('#filter-all-interests > span').innerHTML = 'Show Interests';
     interestList.forEach((interest) => {
-        interest.setAttribute('style', 'display:none;');
+        interest.parentElement.setAttribute('style', 'display:none;');
     })
 }
 
@@ -347,38 +346,43 @@ function updateFilters() {
             deactivateInterests();
         }
     }
-    assignRandomSpotToCard();
+    let tempCardIdList = determineVisibleCards();
+    assignRandomSpotToCard(tempCardIdList);
 }
 
-// WIP Section
-
-// Assign random number to a card
-const assignRandomSpotToCard =  () => {
-    console.log('entering assignment');
-    console.log(cardIdList);
-    // filter out all cards that are not getting displayed
-    cardIdList.forEach(cardId => {
-        if (document.getElementById(cardId).getAttribute('style') === 'display:none;') {
-            cardIdList.splice(cardIdList.indexOf(cardId), 1)
+/**
+ * When called, accesses the list of existing cards and checks each of them for visibility. Returns list of ids
+ * for the card fronts that are visible.
+ * @returns {*[]}
+ */
+function determineVisibleCards() {
+    let visibleCardsIds = [];
+    for (let cardId in fixedCardIdList) {
+        let cardIdString = fixedCardIdList[cardId];
+        if (document.getElementById(cardIdString).parentElement.getAttribute('style') === 'display:none;') {
+            continue;
         }
-    });
+        else {
+            visibleCardsIds.push(cardIdString);
+        }
+    }
+    return visibleCardsIds;
+}
 
-    console.log(cardIdList);
-    let cardNumberToDistribute = cardIdList.length;
-    console.log(cardNumberToDistribute);
-    // Make a for-loop with an index starting at 1
-    for (let i = 1; i < (cardNumberToDistribute.length + 1); i++) {
-        console.log('entering loop');
-        // Take a random number from the current number of cards
-        let randomCard= Math.floor(Math.random() * cardIdList.length);
-        // access the id at that index in cardIdList
-        let elementToSortIn = cardIdList[randomCard];
-        // generate current box number
+/**
+ * Takes a list of card front ids for visible cards and assigns the card element they belong to a random id.
+ * These ids look like this: box<number> (where <number> is between 1 and <number of visible cards>).
+ * Placement in the grid is determined by id number.
+ * @param idList List of strings
+ */
+const assignRandomSpotToCard = (idList) => {
+    let cardNumberToDistribute = idList.length;
+    for (let i = 1; i < (cardNumberToDistribute + 1); i++) {
+        let randomCard= Math.floor(Math.random() * idList.length);
+        let elementToSortIn = idList[randomCard];
         let currentBoxNumber = 'box' + i;
-        // add box number as an id to the parent element of the element with the chosen id
         document.getElementById(elementToSortIn).parentElement.setAttribute('id', currentBoxNumber);
-        // remove id from cardIdList
-        cardIdList.splice(randomCard, 1);
+        idList.splice(randomCard, 1);
     }
 }
 
