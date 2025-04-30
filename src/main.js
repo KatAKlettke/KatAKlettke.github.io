@@ -313,32 +313,37 @@ function updateFilters() {
         activateProjects();
         activateInterests();
 
-    } else {
+    }
+    else {
         document.getElementById('open-eye').setAttribute('style', 'display:none;');
         document.getElementById('hidden-eye').removeAttribute('style');
         document.querySelector('#filter-all-text > span').innerHTML = 'Show All';
 
         if (localStorage.getItem('skillIsShown') === 'true') {
             activateSkills();
-        } else {
+        }
+        else {
             deactivateSkills();
         }
 
         if (localStorage.getItem('strengthIsShown') === 'true') {
             activateStrengths();
-        } else {
+        }
+        else {
             deactivateStrengths();
         }
 
         if (localStorage.getItem('projectIsShown') === 'true') {
             activateProjects();
-        } else {
+        }
+        else {
             deactivateProjects();
         }
 
         if (localStorage.getItem('interestIsShown') === 'true') {
             activateInterests();
-        } else {
+        }
+        else {
             deactivateInterests();
         }
     }
@@ -349,7 +354,7 @@ function updateFilters() {
 
 // Assign random number to a card
 const assignRandomSpotToCard =  () => {
-    console.log('entering assignment')
+    console.log('entering assignment');
     console.log(cardIdList);
     // filter out all cards that are not getting displayed
     cardIdList.forEach(cardId => {
@@ -360,9 +365,9 @@ const assignRandomSpotToCard =  () => {
 
     console.log(cardIdList);
     let cardNumberToDistribute = cardIdList.length;
-
+    console.log(cardNumberToDistribute);
     // Make a for-loop with an index starting at 1
-    for (let i = 1; i < (cardNumberToDistribute.length + 1); i += 1) {
+    for (let i = 1; i < (cardNumberToDistribute.length + 1); i++) {
         console.log('entering loop');
         // Take a random number from the current number of cards
         let randomCard= Math.floor(Math.random() * cardIdList.length);
