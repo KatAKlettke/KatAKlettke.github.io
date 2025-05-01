@@ -44,27 +44,22 @@ colorThemes.forEach((themeOption) => {
 })
 
 filterAllElement.addEventListener('click', () => {
-    console.log('Filter All triggered');
     toggleAllFilter();
 });
 
 filterSkillsElement.addEventListener('click', () => {
-    console.log('Filter Skills triggered');
     toggleSkillFilter();
 });
 
 filterStrengthsElement.addEventListener('click', () => {
-    console.log('Filter Strengths triggered');
     toggleStrengthFilter();
 });
 
 filterProjectsElement.addEventListener('click', () => {
-    console.log('Filter Projects triggered');
     toggleProjectFilter();
 });
 
 filterInterestsElement.addEventListener('click', () => {
-    console.log('Filter Interests triggered');
     toggleInterestFilter();
 })
 
