@@ -286,6 +286,7 @@ main {
     height: 100%;
     -webkit-backface-visibility: hidden; /* required for Safari */
     backface-visibility: hidden;
+    will-change: transform;   /* Hints to the browser */
 }
 
 .box-front {
